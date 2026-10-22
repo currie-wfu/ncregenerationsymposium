@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NC Regen Bio Symposium//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nc-regen-symposium-2027@wfu
+DTSTAMP:20261022T000000Z
+DTSTART:20270218T150000Z
+DTEND:20270218T230000Z
+SUMMARY:NC Regeneration Biology Symposium
+LOCATION:Biotech Place\, 575 N Patterson Ave\, Winston-Salem\, NC 27101
+DESCRIPTION:Keynote by Ashley Seifert (University of Kentucky)\, six invited talks\, six trainee talks and a poster session. Wake Forest University.
+END:VEVENT
+END:VCALENDAR
