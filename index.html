@@ -152,6 +152,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .prose{display:grid;gap:1rem;max-width:62ch;color:var(--fg)}
 .prose p{color:var(--muted)}
 .prose p.lead{color:var(--fg);font-size:1.12rem}
+.speakers{margin-top:.8rem;display:grid;gap:.8rem}
+.speakers h3{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--heading)}
+.speaker-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.5rem;border-top:1px solid var(--rule)}
+.speaker-list li{padding:.7rem 0;border-bottom:1px solid var(--rule);display:grid;gap:.1rem;align-content:start;min-width:0}
+.speaker-list .name{font-weight:600;color:var(--fg)}
+.speaker-list .inst{font-size:.86rem;color:var(--muted);line-height:1.4}
+@media (max-width:520px){.speaker-list{grid-template-columns:1fr}}
 
 .schedule{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
 .schedule li{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
@@ -338,6 +345,17 @@ footer a{color:var(--seafoam)}
         <p class="lead">The NC Regeneration Biology Symposium brings together labs across North Carolina studying regeneration, tissue repair, cell and developmental biology, and biomedical engineering.</p>
         <p>From salamander limbs and zebrafish fins to engineered stem-cell niches and bioprinted tissues, the meeting highlights the robust regenerative biology research happening across North Carolina.</p>
         <p>Registration is free! Registration and abstract deadlines, program details, and travel logistics coming soon!</p>
+        <div class="speakers">
+          <h3>Confirmed invited speakers</h3>
+          <ul class="speaker-list">
+            <li><span class="name">Laura Lee</span><span class="inst">University of North Carolina at Chapel Hill</span></li>
+            <li><span class="name">Neil McCarthy</span><span class="inst">North Carolina State University</span></li>
+            <li><span class="name">Amy McNulty</span><span class="inst">Duke University</span></li>
+            <li><span class="name">Akankshi Munjal</span><span class="inst">Duke University</span></li>
+            <li><span class="name">Sean Murphy</span><span class="inst">Wake Forest Institute for Regenerative Medicine</span></li>
+            <li><span class="name">Jason Watts</span><span class="inst">National Institute of Environmental Health Sciences</span></li>
+          </ul>
+        </div>
       </div>
 
       <div id="program">
@@ -357,7 +375,7 @@ footer a{color:var(--seafoam)}
           <li><time>4:40</time><span class="what">Poster session</span></li>
           <li><time>6:00</time><span class="what">End</span></li>
         </ol>
-        <p style="margin-top:.8rem;font-size:.85rem;color:var(--muted)">Speakers and selected talks will be announced here.</p>
+        <p style="margin-top:.8rem;font-size:.85rem;color:var(--muted)">Selected talks will be announced here.</p>
       </div>
     </div>
   </section>
