@@ -124,11 +124,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .band .wrap{position:relative;z-index:1;padding-block:calc(var(--angle-cut) + 3rem) 5rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:3rem 3.5rem;align-items:start}
 @media (max-width:860px){.band .wrap{grid-template-columns:1fr}.band-bg::before{width:80%;clip-path:polygon(0 0,100% 18%,0 42%)}.band-bg::after{clip-path:polygon(100% 70%,100% 100%,0 100%)}}
 
+.venue-row{grid-column:1 / -1;color:var(--ink);display:grid;gap:.35rem;padding-bottom:1.6rem;border-bottom:1.5px solid rgba(20,28,38,.3)}
+.venue-head{font-family:var(--body);font-weight:700;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .5em}
+.venue-head .bar{font-weight:300;opacity:.45}
+.venue-head em{font-style:italic;font-size:.9em;white-space:nowrap}
+.venue-sub{font-weight:500;font-size:1.02rem}
+.venue-row{margin-bottom:-1.2rem}
+@media (max-width:560px){.venue-head{flex-direction:column;gap:.15rem}.venue-head .bar{display:none}}
 .venue{color:var(--ink);display:grid;gap:.9rem;align-self:center;min-width:0}
-.venue-line{font-size:clamp(1rem,1.45vw,1.12rem);font-weight:500;line-height:1.35}
-.venue-line b{font-weight:700}
-.venue-line .bar{opacity:.45;margin-inline:.45em}
-.venue-line em{font-weight:700;font-style:italic;white-space:nowrap}
 .venue .label{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8;margin-top:.4rem}
 .speaker-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.5rem;border-top:1.5px solid rgba(20,28,38,.35)}
 .speaker-list li{padding:.6rem 0;border-bottom:1.5px solid rgba(20,28,38,.2);display:grid;gap:.05rem;align-content:start;min-width:0}
@@ -206,7 +209,7 @@ footer a{color:var(--seafoam)}
 .std-menu a:hover,.std-menu a:focus-visible{background:#EEF3F3}
 .std-menu small{display:block;color:#5B6570;font-weight:400;font-size:.78rem}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
-.venue .maplink{color:var(--ink);font-weight:600;font-size:.92rem;margin-top:.5rem;text-underline-offset:4px}
+.venue-row .maplink{color:var(--ink);font-weight:600;font-size:.92rem;margin-top:.5rem;text-underline-offset:4px}
 
 /* ---------- directions ---------- */
 .directions{border-top:1px solid var(--rule)}
@@ -298,8 +301,13 @@ footer a{color:var(--seafoam)}
   <section class="band" id="venue" aria-label="Venue, keynote and program highlights">
     <div class="band-bg" aria-hidden="true"></div>
     <div class="wrap">
+      <div class="venue-row">
+        <h2 class="venue-head"><span>Biotech Place</span><span class="bar" aria-hidden="true">|</span><em>10am – 6pm</em></h2>
+        <p class="venue-sub">Wake Forest School of Medicine</p>
+        <a class="maplink" href="#directions">Map &amp; directions ↓</a>
+      </div>
+
       <div class="venue">
-        <p class="venue-line"><b>Biotech Place</b>, Wake Forest School of Medicine<span class="bar">|</span><em>10am – 6pm</em></p>
         <h2 class="label">Invited speakers</h2>
         <ul class="speaker-list">
           <li><span class="name">Laura Lee</span><span class="inst">University of North Carolina at Chapel Hill</span></li>
@@ -309,7 +317,6 @@ footer a{color:var(--seafoam)}
           <li><span class="name">Sean Murphy</span><span class="inst">Wake Forest Institute for Regenerative Medicine</span></li>
           <li><span class="name">Jason Watts</span><span class="inst">National Institute of Environmental Health Sciences</span></li>
         </ul>
-        <a class="maplink" href="#directions">Map &amp; directions ↓</a>
       </div>
 
       <div class="keynote">
