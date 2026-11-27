@@ -186,9 +186,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .sponsors{background:var(--ink);color:var(--mist);clip-path:polygon(0 0,100% var(--angle-cut),100% 100%,0 100%);margin-top:calc(-1 * var(--angle-cut));position:relative;z-index:1}
 .sponsors .wrap{padding-block:calc(var(--angle-cut) + 2.5rem) 4rem;display:grid;gap:1.8rem}
 .sponsors .section-title{color:var(--mist)}
-.slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-.slot{aspect-ratio:3/2;border:1.5px dashed rgba(242,242,242,.35);border-radius:10px;display:grid;place-items:center;font-size:.8rem;color:rgba(242,242,242,.6);text-align:center;padding:.5rem}
-@media (max-width:700px){.slots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sponsor-logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:2rem 3.5rem}
+.sponsor-logos img{height:clamp(72px,10vw,110px);width:auto;max-width:100%}
 .sponsors p{color:rgba(242,242,242,.8);max-width:60ch}
 .sponsors a{color:var(--seafoam)}
 
@@ -423,12 +422,9 @@ footer a{color:var(--seafoam)}
   <section class="sponsors" id="sponsors" aria-labelledby="sp-title">
     <div class="wrap">
       <h2 id="sp-title" class="section-title">Sponsors</h2>
-      <div class="slots">
-        <div class="slot">Sponsor logo</div>
-        <div class="slot">Sponsor logo</div>
-        <div class="slot">Sponsor logo</div>
-        <div class="slot">Sponsor logo</div>
-      </div>
+      <ul class="sponsor-logos">
+        <li><img src="assets/sponsor-duke-regeneration-center.png" width="900" height="269" alt="Duke Regeneration Center"></li>
+      </ul>
       <p>Interested in partnering with us to financially sponsor the meeting? <a href="#contact">Get in touch with the organizing committee</a>.</p>
     </div>
   </section>
